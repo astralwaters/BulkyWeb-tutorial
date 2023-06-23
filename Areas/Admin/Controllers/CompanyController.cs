@@ -14,8 +14,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
     //[Authorize(Roles = SD.Role_Admin)]
     public class CompanyController : Controller
     {
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IUnitOfWork _unitOfWork;        
         public CompanyController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
