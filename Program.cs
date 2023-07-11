@@ -27,6 +27,10 @@ internal class Program
             options.LogoutPath = $"/Identity/Account/Logout";
             options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
         });
+        builder.Services.AddAuthentication().AddFacebook(option => {
+            option.AppId = "605853158037742";
+            option.AppSecret = "b4f1f4a89f660d14eb9e68b71b10e9aa";
+        });
 
         builder.Services.AddDistributedMemoryCache();
         builder.Services.AddSession(options =>
